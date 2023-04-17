@@ -1,0 +1,10 @@
+* MULTER
+- multer is a very popular middleware to handle multi-part form data, which is a form in coding tha's usd to upload files from a form
+ - multer is basically a middleware for multi-part form data
+ - We will allow the user to upload a photo on the UpdateMe route
+ - install the packaged that we need (npm i multer)
+ - on userRoutes.js import multer - follow on that file
+
+ * SHARP
+    - npm i sharp
+    - sharp is an image processing library for node js
