@@ -23,7 +23,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
-
+//sample
 // in order to actually get access to the cookies that are in our request
 // we need to install a certain middleware npm i cookie-parser, basically this packages will then parse
 // all the cookies from the incoming request
