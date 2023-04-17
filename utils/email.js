@@ -64,7 +64,7 @@ module.exports = class Email{
     
         await this.newTransport().sendMail(mailOptions,(err, result) => {
             if (err){
-            console.log(err)
+           // console.log(err)
             console.log(result.envelope);
             console.log(result.messageId);
 

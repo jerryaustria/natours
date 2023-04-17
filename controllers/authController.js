@@ -147,7 +147,7 @@ exports.protect = catchAsync(async(req,res,next)=>{
         
     //2. Verification token
     const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
-    console.log(decoded);
+    //console.log(decoded);
     //promisifying function, to make it return a promise so thay way 
     // we can then use async await just like any other async function that we've been using
     //in order to do that Node actually has a built-in promisify function.
@@ -235,7 +235,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) =>{
 
         await new Email(user, resetURL).sendPasswordReset();
     }catch(err){
-        console.log(err);
+        ///console.log(err);
         user.createPasswordResetToken = undefined;
         user.passwordResetExpires = undefined;
         await user.save({validateBeforeSave: false});
@@ -275,7 +275,7 @@ exports.resetPassword = catchAsync(async (req, res, next) =>{
 exports.updatePassword = catchAsync(async(req, res, next)=>{
     //1. Get user from collection
     const user = await User.findById(req.user.id).select('+password');
-        console.log(user);
+        //console.log(user);
     //2. Check if posted current password is correct
     if(!(await user.correctPassword(req.body.passwordCurrent, user.password))){
         return next (new AppError('You current password is wrong.', 401));
