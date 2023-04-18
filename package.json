@@ -8,7 +8,8 @@
     "main": false
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "build": "parcel build ./public/js/index.js --dist-dir ./public/js/bundled",
     "watch": "parcel watch ./public/js/index.js --dist-dir ./public/js/bundled"
@@ -56,5 +57,8 @@
     "parcel-bundler": "^1.12.5",
     "path-browserify": "^1.0.1",
     "prettier": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
