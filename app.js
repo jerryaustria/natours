@@ -31,7 +31,7 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
-app.use(compression())
+app.use(compression());
 
 //npm i pug
 app.set('view engine', 'pug');
