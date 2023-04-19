@@ -31,7 +31,7 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
-   
+app.use(compression())
 
 //npm i pug
 app.set('view engine', 'pug');
@@ -72,7 +72,7 @@ app.use(express.static(path.join(__dirname,'public')));
     )
 
 
-    app.use(compression())
+    
 
 
 // install express-csp and add the below in app.js
