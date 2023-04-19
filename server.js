@@ -40,7 +40,7 @@ process.on('unhandledRejection', err=>{
     }) 
 })
 
-process.on('SIGNMA',()=>{
+process.on('SIGMA',()=>{
     console.log('SIGMA RECEIVED. Shutting down gracefully');
     server.close(()=>{
         console.log('Process terminated!');
